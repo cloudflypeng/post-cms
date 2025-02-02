@@ -1,8 +1,16 @@
-name = "my-worker"
-type = "javascript"
+name = "post-cms"
+type = "typescript"
+main = "./src/index.ts"  # 修改为 TypeScript 源文件
+
+compatibility_date = "2024-02-02"  # 添加兼容性日期
+compatibility_flags = ["nodejs_compat"]  # 添加 Node.js 兼容模式
 
 [env.production]
 workers_dev = true
 route = ""
-zone_id = ""
-account_id = ""
+account_id = "${CLOUDFLARE_ACCOUNT_ID}"
+
+[triggers]
+crons = []  # 如果不需要定时任务，可以留空
+
+
