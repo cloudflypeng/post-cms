@@ -1,0 +1,8 @@
+name = "my-worker"
+type = "javascript"
+
+[env.production]
+workers_dev = true
+route = ""
+zone_id = ""
+account_id = ""
