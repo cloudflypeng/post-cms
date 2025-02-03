@@ -1,0 +1,19 @@
+name = "post-cms"
+type = "typescript"
+main = "./src/index.ts"
+
+compatibility_date = "2024-02-02"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+workers_dev = true
+route = ""
+account_id = "${CLOUDFLARE_ACCOUNT_ID}"
+
+[[kv_namespaces]]
+binding = "kv_account"
+id = "your-development-kv-id"  # 替换为实际的开发环境 KV ID
+
+[env.production.kv_namespaces]
+binding = "kv_account"
+id = "your-production-kv-id"  # 替换为实际的生产环境 KV ID 
