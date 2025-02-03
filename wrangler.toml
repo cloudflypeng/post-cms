@@ -1,0 +1,16 @@
+name = "post-cms"
+main = "src/index.ts"
+type = "typescript"
+
+compatibility_date = "2024-02-02"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+workers_dev = true
+route = ""
+account_id = "${CLOUDFLARE_ACCOUNT_ID}"
+
+[[kv_namespaces]]
+binding = "kv_account"
+preview_id = "02d40f2c54a548ecacec7d1a4b58c8a3"  # 开发环境
+id = "02d40f2c54a548ecacec7d1a4b58c8a3"         # 生产环境 

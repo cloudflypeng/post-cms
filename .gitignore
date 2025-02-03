@@ -1,5 +1,4 @@
 # Cloudflare Workers 相关
-/wrangler.toml
 .wrangler/**
 
 # 依赖相关
