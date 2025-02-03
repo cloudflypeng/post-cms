@@ -13,8 +13,5 @@ account_id = "${CLOUDFLARE_ACCOUNT_ID}"
 [triggers]
 crons = []  # 如果不需要定时任务，可以留空
 
-[[kv_namespaces]]
-binding = "kv_account"
-id = "${CLOUDFLARE_KV_BINDING_ID}"
 
 
